@@ -1,0 +1,6 @@
+{
+  "title": "Terminal",
+  "description": "Retro terminal interface to chat with R1 AI via text, voice (PTT), or camera.",
+  "iconUrl": "/icon.jpg",
+  "themeColor": "#00FF00"
+}

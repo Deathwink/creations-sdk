@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=282, height=240, initial-scale=1.0, user-scalable=no">
+    <title>Terminal</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Header with ASCII logo and status -->
+        <header id="header">
+            <div class="logo-section">
+                <pre class="ascii-logo">╔╦╗╔═╗╦═╗╔╦╗</pre>
+                <span class="logo-text">TERM</span>
+            </div>
+            <div class="status-section">
+                <span class="time" id="clock">00:00</span>
+                <span class="battery" id="battery">batt --%</span>
+            </div>
+        </header>
+
+        <!-- Main terminal output area -->
+        <main id="terminal-output">
+            <div class="welcome-msg">
+                <span class="prompt">&gt;</span> RABBIT R1 TERMINAL v1.0
+            </div>
+            <div class="welcome-msg">
+                <span class="prompt">&gt;</span> Ready for input...
+            </div>
+        </main>
+
+        <!-- Input area -->
+        <footer id="input-area">
+            <div class="input-row">
+                <span class="prompt">&gt;</span>
+                <input type="text" id="text-input" placeholder="type here..." autocomplete="off">
+            </div>
+            <div class="controls">
+                <button id="camera-btn" class="ctrl-btn" title="Camera Input">
+                    <span class="icon">📷</span>
+                </button>
+                <button id="send-btn" class="ctrl-btn send" title="Send">
+                    <span class="icon">→</span>
+                </button>
+            </div>
+        </footer>
+
+        <!-- Voice recording indicator -->
+        <div id="voice-indicator" class="hidden">
+            <div class="voice-pulse"></div>
+            <span>RECORDING...</span>
+        </div>
+
+        <!-- Camera preview overlay -->
+        <div id="camera-overlay" class="hidden">
+            <video id="camera-preview" autoplay playsinline></video>
+            <div class="camera-controls">
+                <button id="capture-btn" class="ctrl-btn">📸 CAPTURE</button>
+                <button id="close-camera-btn" class="ctrl-btn">✕ CLOSE</button>
+            </div>
+        </div>
+
+        <!-- Hidden canvas for image capture -->
+        <canvas id="capture-canvas" style="display: none;"></canvas>
+    </div>
+
+    <script src="./js/app.js"></script>
+</body>
+</html>
